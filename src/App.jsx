@@ -12,13 +12,12 @@ import AppLayout from "./layouts/AppLayout.jsx";
 // Import komponen halaman baru sesuai sidebar
 import Dashboard from "./pages/Dashboard.jsx";
 import Siswa from "./pages/Siswa.jsx";
-import OrangTua from "./pages/OrangTua.jsx";
-import Jabatan from "./pages/Jabatan.jsx";
 import Pegawai from "./pages/Pegawai.jsx";
 import BukuTamu from "./pages/BukuTamu.jsx";
 import About from "./pages/About.jsx";
-import LandingPage from "./pages/LandingPage.jsx";
-import GuestbookPage from "./pages/GuestbookPage.jsx";
+
+import OrangTua from "./pages/OrangTua.jsx";
+import Jabatan from "./pages/Jabatan.jsx";
 
 import { GuestRoute, ProtectedRoute } from "./routes/AuthRoutes.jsx";
 
@@ -80,7 +79,7 @@ function App() {
       <ScrollToTop />
 
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        <Route path="/" element={<Navigate to="/dashboard" replace />} />
 
         {/* Rute untuk halaman Login (Guest Only) */}
         <Route element={<GuestRoute />}>
@@ -100,22 +99,8 @@ function App() {
           </Route>
         </Route>
 
-        {/* Rute input buku tamu */}
-        <Route path="/input" element={<GuestbookPage />} />
-
-        {/* Jika user sudah login dan mengakses /login, redirect ke page lain */}
-        {/* <Route
-          path="/login"
-          element={
-            <ProtectedRoute>
-              <Navigate to="/" replace />
-            </ProtectedRoute>
-          }
-        /> */}
-
         {/* Jika rute tidak ditemukan, arahkan ke halaman utama */}
-        {/* <Route path="*" element={<Navigate to="/dashboard" replace />} /> */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </Router>
   );
