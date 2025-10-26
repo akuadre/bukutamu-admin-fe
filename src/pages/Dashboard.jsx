@@ -37,7 +37,7 @@ ChartJS.register(
   Filler
 );
 
-const API_URL = "http://localhost:8000/api";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
 // --- Animation Variants for Framer Motion ---
 const containerVariants = {

@@ -23,8 +23,8 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const API_URL = "http://localhost:8000/api";
-const IMG_URL = "http://localhost:8000/uploads/foto_tamu/";
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
+const IMG_URL = import.meta.env.VITE_IMG_URL || "http://localhost:8000/uploads/foto_tamu";
 
 // =================================================================
 // KOMPONEN HELPER
@@ -260,7 +260,7 @@ const BukuTamuDetailModal = ({ tamu, onClose, loading, onDelete }) => {
             {tamu.foto_tamu ? (
               <div className="flex justify-center">
                 <img
-                  src={`${IMG_URL}${tamu.foto_tamu}`}
+                  src={`${IMG_URL}/${tamu.foto_tamu}`}
                   // alt={`Foto ${tamu.nama}`}
                   alt='Foto Tamu'
                   className="w-64 h-48 object-cover rounded-xl shadow-md border-4 border-white"

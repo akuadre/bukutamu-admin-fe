@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import axios from "axios"; // TAMBAH IMPORT AXIOS
 
-const API_URL = 'http://localhost:8000/api'; // TAMBAH API URL
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);

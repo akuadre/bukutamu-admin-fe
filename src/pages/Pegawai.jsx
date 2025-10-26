@@ -3,8 +3,8 @@ import axios from 'axios';
 import { Search, Info, X, ChevronLeft, ChevronRight, User, School, BookUser, Home, Briefcase, FileText, HeartHandshake, Banknote, ShieldCheck, CheckCircle, AlertTriangle, XCircle, Award, GraduationCap, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const API_URL = 'http://localhost:8000/api'; // URL API Aplikasi Anak
-const PHOTO_BASE_URL = 'http://localhost:8001'; // URL Aplikasi Induk untuk foto
+const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api"; // URL API Aplikasi Anak
+const PHOTO_BASE_URL = import.meta.env.VITE_IMG_URL_INDUK  || "http://localhost:8001"; // URL Aplikasi Induk untuk foto
 
 // =================================================================
 // KOMPONEN-KOMPONEN HELPER (SUDAH DIGABUNG)

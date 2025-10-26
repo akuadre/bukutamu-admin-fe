@@ -14,7 +14,8 @@ import Modal from "../components/Modal";
 import Notification from "../components/Notification";
 import FormInput from "../components/FormInput";
 
-const API_URL = "http://localhost:8000/api/orangtua";
+const API_BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000/api";
+const API_URL = `${API_BASE}/orangtua`;
 
 const OrangTua = () => {
   const [orangTua, setOrangTua] = useState([]);
