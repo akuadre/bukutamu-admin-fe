@@ -643,14 +643,6 @@ const BukuTamu = () => {
               </button>
             )}
           </div>
-
-          {/* <Link
-            to="/input"
-            className="bg-sky-600 text-white px-5 py-2.5 rounded-lg hover:bg-sky-700 transition-all duration-300 flex items-center justify-center shadow-lg shadow-sky-200 hover:shadow-xl w-full md:w-auto"
-          >
-            <PlusCircle className="w-5 h-5 mr-2" />
-            <span>Tambah Kunjungan</span>
-          </Link> */}
         </div>
 
         {/* Active Filters Info */}
